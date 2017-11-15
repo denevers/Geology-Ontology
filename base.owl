@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.igsint.com/ontology/Base#"
+     xml:base="http://www.igsint.com/ontology/Base"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.igsint.com/ontology/Base"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.igsint.com/ontology/Base#hasProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.igsint.com/ontology/Base#hasProperty">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.igsint.com/ontology/Base#hasProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.igsint.com/ontology/Base#GeologicFeature"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.igsint.com/ontology/Base#hasProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.igsint.com/ontology/Base#AbstractDescription"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.igsint.com/ontology/Base#hasSpatialOccurrence -->
+
+    <owl:ObjectProperty rdf:about="http://www.igsint.com/ontology/Base#hasSpatialOccurrence">
+        <owl:inverseOf rdf:resource="http://www.igsint.com/ontology/Base#hasSpatialOccurrence"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.igsint.com/ontology/Base#hasSpatialOccurrence"/>
+                <owl:someValuesFrom rdf:resource="http://www.igsint.com/ontology/Base#GeologicFeature"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.igsint.com/ontology/Base#hasSpatialOccurrence"/>
+                <owl:someValuesFrom rdf:resource="http://www.igsint.com/ontology/Base#MappedFeature"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.igsint.com/ontology/Base#hasSpecification -->
+
+    <owl:ObjectProperty rdf:about="http://www.igsint.com/ontology/Base#hasSpecification"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.igsint.com/ontology/Base#AbstractDescription -->
+
+    <owl:Class rdf:about="http://www.igsint.com/ontology/Base#AbstractDescription"/>
+    
+
+
+    <!-- http://www.igsint.com/ontology/Base#GeologicFeature -->
+
+    <owl:Class rdf:about="http://www.igsint.com/ontology/Base#GeologicFeature"/>
+    
+
+
+    <!-- http://www.igsint.com/ontology/Base#GeologicStructure -->
+
+    <owl:Class rdf:about="http://www.igsint.com/ontology/Base#GeologicStructure">
+        <rdfs:subClassOf rdf:resource="http://www.igsint.com/ontology/Base#GeologicFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.igsint.com/ontology/Base#GeologicUnit -->
+
+    <owl:Class rdf:about="http://www.igsint.com/ontology/Base#GeologicUnit">
+        <rdfs:subClassOf rdf:resource="http://www.igsint.com/ontology/Base#GeologicFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.igsint.com/ontology/Base#MappedFeature -->
+
+    <owl:Class rdf:about="http://www.igsint.com/ontology/Base#MappedFeature"/>
+    
+
+
+    <!-- http://www.igsint.com/ontology/Base#OtherGeologicFeature -->
+
+    <owl:Class rdf:about="http://www.igsint.com/ontology/Base#OtherGeologicFeature">
+        <rdfs:subClassOf rdf:resource="http://www.igsint.com/ontology/Base#GeologicFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.igsint.com/ontology/Base#GeologicStructure"/>
+            <rdf:Description rdf:about="http://www.igsint.com/ontology/Base#GeologicUnit"/>
+            <rdf:Description rdf:about="http://www.igsint.com/ontology/Base#OtherGeologicFeature"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
